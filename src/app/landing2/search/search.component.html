@@ -1,7 +1,10 @@
 <p>search works!</p>
 <gw-nav>s</gw-nav>
 <div class="message"*ngFor="let message of messages">
-    <h3>{{message.author}}</h3>
-    <div>{{message.text}}</div>
-    <span>{{message.date}}</span>
+    <h3 [innerHTML]="message.author"></h3>
+
+    <input type="text" [(ngModel)]="text">
+    <button (click)="onClick()">Click</button>
+    <div>{{message.text}}-<span>{{message.date}}</span></div>
+    
 </div>
